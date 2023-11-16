@@ -1,43 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl-PL">
-<meta http-equiv="Content-Type"content="text/html;charset=utf-8"/>
-<head>
-<title>Formulasze</title>
-</head>
-<body>
-    <div style="float:left;width:30%;overflow:auto; background-color:#e9e9e9cd;">
-        <h2>Linki</h2>
-        <a href="index.html">Strona główna</a> <br />
-        <a href="nauczyciele.html">Nauczyciele</a> <br />
-        <a href="">Zdjęcia</a> <br />
-        <a href="tabele.html">TABELA</a> <br />
-        <a href="">Tabela na ocene</a> <br />
-        <a href="listy.html">Lista</a> <br />
-        <a href="">Lista na ocene</a> <br />
-        <a href="formularze.html">Formularz</a> <br />
-        <a href="formularz_rybicki.html">Formularz na ocene</a> <br />
-        <a href="obrazy_i_multimedia.html">Multimedia</a> <br />
-        <h2>Dokumenty</h2>
-        <a href="doc/grupaii2.docx"> WORD</a> <br />
-        <a href="doc/zeszyt1.xlsx"> EXCEL</a>
+    <meta />
+    <head>
+        <title>Formularz</title>
+    </head>
+    <body bgcolor="#b8b19e">
+        <div style="float:left;width:30%;overflow:auto; background-color:#e9e9e9cd;">
+            <h2>Linki</h2>
+            <a href="index.html">Strona główna</a> <br />
+            <a href="nauczyciele.html">Nauczyciele</a> <br />
+            <a href="">Zdjęcia</a> <br />
+            <a href="tabele.html">TABELA</a> <br />
+            <a href="">Tabela na ocene</a> <br />
+            <a href="listy.html">Lista</a> <br />
+            <a href="">Lista na ocene</a> <br />
+            <a href="formularze.html">Formularz</a> <br />
+            <a href="formularz_rybicki.html">Formularz na ocene</a> <br />
+            <a href="obrazy_i_multimedia.html">Multimedia</a> <br />
+            <h2>Dokumenty</h2>
+            <a href="doc/grupaii2.docx"> WORD</a> <br />
+            <a href="doc/zeszyt1.xlsx"> EXCEL</a>
 
-        <h2>LINKI obrazowe</h2>
-        <a href="https://google.pl" target="new"> <img src="foty/google.jpg" width="100px"/> </a> <br/>
-        <a href="http://tsi-pai.cba.pl" target="new"> <img src="foty/isaac.jpg" width="100px" /> </a>
-    </div>
+            <h2>LINKI obrazowe</h2>
+            <a href="https://google.pl" target="new"> <img src="foty/google.jpg" width="100px"/> </a> <br/>
+            <a href="http://tsi-pai.cba.pl" target="new"> <img src="foty/isaac.jpg" width="100px" /> </a>
+        </div>  
+        <div style="float:right;width:70%;">
+        <form>
+            <fieldset>
+                <p> imię i nazwisko <input type="text" name="imie_i_nazwisko" size="30" /> </p>            
+                <p> HASŁO <input type="password" id="haslo" maxlength="10" size="8"/> </p>
+            </fieldset>
+            <p>
+                <input type="radio" name="gender" id="male" value="chop" /> <label for="male"> CHOP </label><br />
+                
+                <input type="radio" name="gender" id="female" value="Kobieta" /> <label for="female"> Kobieta </label><br />
+            </p>
+            <p>JĘZYKI KTÓRYMI WŁADASZ</p>
+            <P><input type="checkbox" name="nazwa_jezyki" value="wartosc_angielski" checked />angielski</P>
+            <P><input type="checkbox" name="nazwa_jezyki" value="wartosc_niemiecki"  />niemiecki</P>
+            <P><input type="checkbox" name="nazwa_jezyki" value="wartosc_italiano"  />włoski</P>
+            <p>
+                <input type="file" name="pliczek" size="30" />
+            </p>
+            <fieldset>
+                <legend>CZYSZCZENIE i WYSYŁANIE</legend>
+                <input type="submit" value="wysylanie" /> <br /><br />
+                <input type="reset" value="oczysc" />
+            </fieldset>
+            <br />
+            <br />
+            <button type="button" name="guzik" value="konfa" onclick="alert('KONFEDERACJA MA KLUB POSELSKI')">KONFEDERACJA</button>
+            <p><button type="sumbit" name="foto"><img src="adriatyk.jpg" width="700px"/></button></p>
+            <br />
+            <br />
+            <p>
+                <select name="lista1" size="6" multiple>
+                    <optgroup label="partie polityczne">
+                        <option value="PiS" /> PiS
+                        <option value="KO" /> KO
+                        <option value="Konfederacja" /> Konfederacja
+                        <option value="Nowa Leiwca" /> Nowa Lewica
+                        <option value="PSL" /> PSL
+                    </optgroup>
+                </select>
+            </p>
 
-    <form>
-        <p> Imię i Nazwisko <input type="text"  name="imie"/></p>
-        <p> Adres email <input type="text"  name="email"/></p>
-        <p> Hasło <input type="password" name="haslo"/></p>
-    <fieldset>
-    <legend> Płeć </legend>
-    <p> samiec <input type="radio" name="male"/></p>
-    <p> samica <input type="radio" name="female"/></p>
-    <p> SAMIEC <input type="radio" name="Male"/></p>
-    <p> SAMICA <input type="radio" name="Female"/></p>
-    </fieldset>
 
-    </form>
+            <p>
+                <select id="owoce" name="lista2" size="6" multiple>
+                    <optgroup label="Owoce">
+                        <option>Jabłko</option>
+                        <option>kiwi</option>
+                    </optgroup>
+                    <optgroup label="warzywa">
+                        <option>brokuł</option>
+                        <option>ziemniok</option>
+                        <option>bakłażan</option>
+                        <option>ogórek</option>
+                    </optgroup>
+                </select>
+            </p>
+
+
+            <input list="blok" name="przeglądarki"/>
+            <datalist id="blok">
+                <option value="CHROME"/>
+                <option value="firefox"/>
+                <option value="opera"/>
+
+            </datalist>
+
+            <br />
+            <br />
+
+            <p>
+                <textarea cols="50" rows="6">
+                    Grzybek
+                    17 szóstych
+                    17 groszy
+                    Wyzimek sobie nie radzi xD
+                </textarea>
+            </p>
+
+            <input type="image" name="fotka" src="adriatyk.jpg" width="500px"/>
+
+
+            <input disabled="disabled" name="nazwiskodd" value="podaj nazwisko" size="25" />
+
+            <input readonly name="nazwisko2" value="Podaj nazwisko" size="25" /> <br />
+
+
+            <p>
+                <label for="pole"> imie </label>
+                    <input type="text" id="pole" size="30" maxlength="40"/>
+            </p>
+            
+
+
+            <p>
+                <label for="pole"> imie 
+                    <input type="text" id="pole" size="30" maxlength="40"/>
+                </label>
+            </p>
+            <br />
+            <br />
+            <br />
+
+
+
+
+
+
+            <input type="email"/>
+            <input type="url"/>
+            <input type="number" min="1" max="7" step="1" value="2" />
+            <input type="date" value="2015-10-30"   />
+            <input type="color" value="#f0f0f0"/>
+            <input type="submit" value="wyslij zapytanie "/>
+            <input type="range" name="points" min="0" max="10"/>-  suwak
+
+
+
+
+
+
+
+        </form>
+        </div>
+        <div style="background-color: gray;clear:both;"><center>&copy;F.H. November 2023</center></div>
     </body>
-    </html>
+</html>
