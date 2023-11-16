@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<meta http-equiv="Content-Type"content="text/html;charset=utf-8"/>
+<head>
+<title>Formularz_RYBICKI</title>
+</head>
+<body bgcolor="aqua">
+    <table border="1">
+        <fieldset>
+            <legend>ADRES</legend>
+
+        
+            <form>
+                <label for="adres">
+                <input type="radio" id="adres"/> podstawowy
+                <input type="radio" id="adres"/> do wysyłki
+                <input type="radio" id="adres"/> korespondencyjny
+                <input type="radio" id="adres"/> odbiorcy
+                </label>
+                <p>Nazwa<input type="text"/></p>
+                <p>Ulica<input type="text"/></p>
+                <p>Numer/lokal<input type="text"/></p>
+                <p>Kod Pocztowy<input type="text"/></p>
+                <p>Miejscowość<input type="text"/></p>
+                <p>telefon<input type="text"/></p>
+                <p>Email<input type="text"/></p>
+                <button type="button" name="Wyślij" onclick="allert('Wysłano');">Wyślij</button>
+                <button type="button" name="Anuluj" onclick="allert('Anulowano');">Anuluj</button>
+
+            
+            </form>
+        </fieldset>
+     </table>
+     <table>
+        <fieldset>
+            <legend>WYSYŁKA</legend>
+            
+                <p>Przesyłka<input list="blok" name="Przesyłka"></p>
+                    <datalist id="blok">
+                    <option value="Ekonomiczna">
+                    <option value="Priorytetowa">
+                    <option value="Ekspresowa">
+                </datalist>
+                <p>Waga (g)<input type="text"/></p>
+                <p>Gabaryt</p>
+                <p>Wartość<input type="text"/>zł</p>
+                <p>Na rachunku<input type="text"/></p>
+                <p>&nbsp;<input type="text"/></p>
+                <p> Z - Żądanie Zwrotu<input type="checkbox" id="lista"/></p>
+                <p> R - Polecenie<input type="checkbox" id="lista"/></p>
+                <p> O - Potwierdzenie odbioru<input type="checkbox" id="lista"/></p>
+                <p> W - zadeklarowanie wartości<input type="checkbox" id="lista"/></p>
+                <p> S - sprawdzenie zawartości<input type="checkbox" id="lista"/></p>
+                <p> K - ostrożnie<input type="checkbox" id="lista"/></p>
+        </fieldset>
+     </table>
+    
+</body>
+</html>
